@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Maser Labs | Custom Software, AI Automation & Web Services",
   description:
-    "High-quality custom software, AI automation, and web services for the modern era. Built by a senior engineer from Citibank & Verizon.",
+    "Custom software, AI automation, and web services, engineered for the modern era. Built by a senior engineer from Citibank & Verizon.",
   openGraph: {
     title: "Maser Labs | Build for what's next.",
     description:

@@ -2,7 +2,7 @@ export const siteContent = {
   hero: {
     headline: "Build for what's next.",
     subline:
-      "Custom software, AI automation, and web services engineered for the modern era.",
+      "Custom software, AI automation, and web services, engineered for the modern era.",
     ctaPrimary: "Free Consult",
     ctaSecondary: "See our work",
     hookPlaceholder: "What do you want to build?",
