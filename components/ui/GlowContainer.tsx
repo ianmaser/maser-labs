@@ -1,5 +1,5 @@
 interface GlowContainerProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   color?: "cyan" | "purple" | "both";
   intensity?: "subtle" | "medium" | "strong";
   className?: string;

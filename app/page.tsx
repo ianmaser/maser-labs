@@ -1,12 +1,29 @@
+import Nav from "@/components/sections/Nav";
+import Hero from "@/components/sections/Hero";
+import TrustStrip from "@/components/sections/TrustStrip";
+import Services from "@/components/sections/Services";
+import Portfolio from "@/components/sections/Portfolio";
+import About from "@/components/sections/About";
+import Process from "@/components/sections/Process";
+import Pricing from "@/components/sections/Pricing";
+import LeadMagnet from "@/components/sections/LeadMagnet";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
+
 export default function Home(): React.ReactElement {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="text-5xl font-bold tracking-tight text-text-primary">
-        Maser Labs
-      </h1>
-      <p className="mt-4 text-lg text-text-muted">
-        Build for what&apos;s next.
-      </p>
-    </main>
+    <>
+      <Nav />
+      <Hero />
+      <TrustStrip />
+      <Services />
+      <Portfolio />
+      <About />
+      <Process />
+      <Pricing />
+      <LeadMagnet />
+      <Contact />
+      <Footer />
+    </>
   );
 }
