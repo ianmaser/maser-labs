@@ -147,7 +147,7 @@ Put ALL copy in `/content/site-content.ts` as typed objects so it's editable in 
 
 Populate from `PLAN_01`:
 
-- **Hero:** headline "Build for what's next.", sub-line "High-quality custom software, AI automation, and web services for the modern era." (see PLAN_01 §1 for optional sub-line polish), CTAs ("Free Consult" / "See our work")
+- **Hero:** headline "Build for what's next.", sub-line "Custom software, AI automation, and web services for the modern era." (see PLAN_01 §1 for optional sub-line polish), CTAs ("Free Consult" / "See our work")
 - **Trust strip:** "Built by an engineer from Citibank & Verizon" + tech logos list
 - **Services (4):** Web & App Development / AI Automation & Integration / Design & UX / Business Systems & Dashboards — with the plain-English blurbs from PLAN_01 §3.4
 - **Portfolio (3):** EDGE, Hold or Fold, Heart2Heart — outcome-focused blurbs from PLAN_01 §3.5 + expandable tech details + live links
