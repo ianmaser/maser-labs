@@ -7,7 +7,7 @@ const { headline, description, cta } = siteContent.leadMagnet;
 
 export default function LeadMagnet(): React.ReactElement {
   return (
-    <section className="py-24">
+    <section className="py-16">
       <GlowContainer color="purple" intensity="medium">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <SectionHeading eyebrow="Free Audit" headline={headline} accentColor="purple" />
