@@ -7,7 +7,7 @@ const { signalLine, cta } = siteContent.pricing;
 
 export default function Pricing(): React.ReactElement {
   return (
-    <section className="py-24">
+    <section className="py-16">
       <GlowContainer color="cyan" intensity="subtle">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <SectionHeading eyebrow="Pricing" headline="Transparent from the start" />

@@ -1,18 +1,26 @@
-import GlowContainer from "@/components/ui/GlowContainer";
 import Button from "@/components/ui/Button";
 import IntakeFormTop from "@/components/forms/IntakeFormTop";
+import HeroBackdrop from "@/components/hero-files/HeroBackdrop";
 import { siteContent } from "@/content/site-content";
 
 const { headline, subline, ctaPrimary, ctaSecondary } = siteContent.hero;
 
 export default function Hero(): React.ReactElement {
   return (
-    <section className="relative min-h-screen pt-16">
-      <GlowContainer color="both" intensity="medium" className="absolute inset-0" />
-
-      <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
-        {/* Showpiece graphic placeholder */}
-        <div className="mb-12 h-48 w-48 rounded-full border border-border-subtle bg-bg-elevated/50 shadow-[0_0_80px_rgba(34,211,238,0.1)]" />
+    <section className="relative min-h-screen overflow-hidden bg-[#050506]">
+      <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
+        {/* Hero showpiece graphic */}
+        <div
+          className="relative -mt-6 mb-0 h-[22rem] w-full max-w-6xl sm:h-[28rem] md:h-[36rem]"
+          style={{
+            maskImage:
+              "radial-gradient(ellipse 80% 75% at 50% 42%, black 45%, transparent 100%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 80% 75% at 50% 42%, black 45%, transparent 100%)",
+          }}
+        >
+          <HeroBackdrop />
+        </div>
 
         <h1 className="max-w-3xl">{headline}</h1>
         <p className="mt-4 max-w-xl text-lg text-text-muted">{subline}</p>
