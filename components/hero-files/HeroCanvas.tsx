@@ -170,7 +170,7 @@ export default function HeroCanvas({ className = "" }: { className?: string }) {
       canvas!.height = H;
 
       CX = W * 0.55;
-      CY = H * 0.44;
+      CY = H * 0.55;
       R = Math.min(W, H) * 0.25;
       const dustN = isMobile ? 90 : 220;
 
