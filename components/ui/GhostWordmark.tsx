@@ -10,7 +10,7 @@ export default function GhostWordmark({
       aria-hidden="true"
       className={`pointer-events-none select-none overflow-hidden ${className}`}
     >
-      <p className="whitespace-nowrap text-center text-[clamp(3rem,10vw,7rem)] font-black uppercase leading-none tracking-widest text-text-primary/[0.03]">
+      <p className="whitespace-nowrap text-center text-[clamp(3rem,10vw,7rem)] font-black uppercase leading-none tracking-widest" style={{ color: 'rgba(245, 247, 250, 0.03)' }}>
         MASER LABS
       </p>
     </div>

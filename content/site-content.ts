@@ -16,7 +16,7 @@ export const siteContent = {
       "Custom software, AI automation, and web services, engineered for the modern era.",
     ctaPrimary: "Free Consult",
     ctaSecondary: "See our work",
-    hookPlaceholder: "What do you want to build?",
+    hookPlaceholder: "What's your big idea?",
   },
 
   trustStrip: {
@@ -116,14 +116,14 @@ export const siteContent = {
 
   pricing: {
     signalLine:
-      "Most projects range from a few thousand to tens of thousands depending on scope — the free consult is where we figure out what's right for you.",
+      "Projects can start as low as a few hundred to tens of thousands depending on scope — the free consult is where we figure out what's right for you.",
     cta: "Book a Free Consult",
   },
 
   leadMagnet: {
     headline: "Free 15-Min AI & Web Opportunity Audit",
     description:
-      "Book a quick call and walk away with 2-3 specific improvements for your business — whether that's your website, an automation opportunity, or an SEO gap.",
+      "Already have a website? Book a quick call and let's talk about how we can improve your business. Whether it's changes your website, an automation opportunity, or an SEO gap, we'll give it the modern, forward-looking treatment it deserves.",
     cta: "Book Your Free Audit",
   },
 
@@ -133,8 +133,10 @@ export const siteContent = {
       "App",
       "AI Automation",
       "Dashboard",
+      "Design & UX",
       "SEO",
-      "Not sure",
+      "Other (please specify below)",
+      "Not sure/Just exploring",
     ],
     budgetOptions: [
       "Under $2,000",
