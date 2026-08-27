@@ -31,7 +31,7 @@ export default function About(): React.ReactElement {
             <div className="mt-10 grid grid-cols-3 gap-4">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-2xl font-bold text-text-primary">
+                  <p className="text-2xl font-bold" style={{ color: '#22D3EE' }}>
                     {stat.value}
                   </p>
                   <p className="mt-1 text-xs uppercase tracking-widest text-text-muted">

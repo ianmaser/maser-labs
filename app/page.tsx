@@ -9,6 +9,7 @@ import Pricing from "@/components/sections/Pricing";
 import LeadMagnet from "@/components/sections/LeadMagnet";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import GradientDivider from "@/components/ui/GradientDivider";
 
 export default function Home(): React.ReactElement {
   return (
@@ -17,11 +18,16 @@ export default function Home(): React.ReactElement {
       <Hero />
       <TrustStrip />
       <Services />
+      <GradientDivider />
       <Portfolio />
+      <GradientDivider />
       <About />
+      <GradientDivider />
       <Process />
+      <GradientDivider />
       <Pricing />
       <LeadMagnet />
+      <GradientDivider />
       <Contact />
       <Footer />
     </>
