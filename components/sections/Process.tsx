@@ -1,5 +1,8 @@
+"use client";
+
 import GlowContainer from "@/components/ui/GlowContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 import { siteContent } from "@/content/site-content";
 
 export default function Process(): React.ReactElement {
@@ -9,9 +12,9 @@ export default function Process(): React.ReactElement {
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading eyebrow="Process" headline="How it works" />
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <StaggerContainer className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4" stagger={0.15}>
             {siteContent.process.map((step) => (
-              <div key={step.step} className="relative text-center">
+              <StaggerItem key={step.step} className="relative text-center">
                 {/* Step number */}
                 <div
                   className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold"
@@ -27,9 +30,9 @@ export default function Process(): React.ReactElement {
                 </div>
                 <h3 className="text-base">{step.title}</h3>
                 <p className="mt-2 text-sm">{step.description}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </GlowContainer>
     </section>

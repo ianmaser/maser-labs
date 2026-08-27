@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown, ExternalLink } from "lucide-react";
 import GlowContainer from "@/components/ui/GlowContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 import { siteContent } from "@/content/site-content";
 
 export default function Portfolio(): React.ReactElement {
@@ -18,10 +19,10 @@ export default function Portfolio(): React.ReactElement {
           accentColor="purple"
         />
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <StaggerContainer className="mt-16 grid gap-8 lg:grid-cols-3" stagger={0.15}>
           {siteContent.portfolio.map((project, i) => (
+            <StaggerItem key={project.title}>
             <GlowContainer
-              key={project.title}
               color={i % 2 === 0 ? "cyan" : "purple"}
               intensity="subtle"
             >
@@ -73,8 +74,9 @@ export default function Portfolio(): React.ReactElement {
                 </div>
               </div>
             </GlowContainer>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

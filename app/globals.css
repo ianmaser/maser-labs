@@ -71,6 +71,40 @@ p {
   box-shadow: 0 0 40px rgba(34, 211, 238, 0.06);
 }
 
+/* Rotating gradient border on buttons */
+.btn-orbit {
+  position: relative;
+  overflow: hidden;
+}
+.btn-orbit::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(from 0deg, #22D3EE, #8B5CF6, #22D3EE);
+  opacity: 0;
+  transition: opacity 0.3s;
+  animation: orbit-spin 3s linear infinite;
+}
+.btn-orbit:hover::before {
+  opacity: 1;
+}
+.btn-orbit::after {
+  content: '';
+  position: absolute;
+  inset: 1.5px;
+  border-radius: inherit;
+  z-index: 1;
+}
+.btn-orbit-primary::after {
+  background: linear-gradient(to right, #22D3EE, #8B5CF6);
+}
+.btn-orbit-secondary::after {
+  background: var(--bg-base);
+}
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
 /* Subtle line grid — echoes hero wireframe geometry */
 .dot-grid {
   background-image:
