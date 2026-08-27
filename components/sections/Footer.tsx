@@ -27,9 +27,9 @@ const ICON_MAP: Record<string, React.FC> = {
 export default function Footer(): React.ReactElement {
   return (
     <footer className="relative border-t border-border-subtle py-16 overflow-hidden">
-      <GhostWordmark className="absolute inset-0 flex items-center justify-center" />
+      <GhostWordmark className="absolute inset-0 z-0 flex items-center justify-center" />
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
           <p className="text-sm text-text-muted">{copyright}</p>
 
