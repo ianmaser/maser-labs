@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronDown, ExternalLink } from "lucide-react";
 import GlowContainer from "@/components/ui/GlowContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -27,11 +28,21 @@ export default function Portfolio(): React.ReactElement {
               intensity="subtle"
             >
               <div className="group rounded-2xl border border-border-subtle bg-bg-elevated overflow-hidden">
-                {/* Screenshot placeholder */}
-                <div className="aspect-video w-full bg-bg-base/80 flex items-center justify-center border-b border-border-subtle">
-                  <span className="text-sm text-text-muted/40">
-                    {project.title} screenshot
-                  </span>
+                {/* Screenshot */}
+                <div className="aspect-video w-full bg-bg-base/80 flex items-center justify-center border-b border-border-subtle overflow-hidden">
+                  {project.image.includes("placeholder") ? (
+                    <span className="text-sm text-text-muted/40">
+                      {project.title} screenshot
+                    </span>
+                  ) : (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      width={600}
+                      height={338}
+                      className="h-full w-full object-cover object-top"
+                    />
+                  )}
                 </div>
 
                 <div className="p-6">

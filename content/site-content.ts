@@ -59,7 +59,7 @@ export const siteContent = {
       blurb:
         "An AI-powered trading analytics platform with natural-language strategy building and live market data.",
       techDetails: "Next.js, Supabase, Claude API, real-time data feeds",
-      image: "/portfolio/edge-placeholder.webp",
+      image: "/portfolio/edge.png",
       liveUrl: "",
     },
     {
@@ -67,7 +67,7 @@ export const siteContent = {
       blurb:
         "An AI poker assistant that reads a photo of the table and recommends the play in real time.",
       techDetails: "React Native, Claude Vision API, real-time image analysis",
-      image: "/portfolio/hold-or-fold-placeholder.webp",
+      image: "/portfolio/hold-or-fold.png",
       liveUrl: "",
     },
     {
@@ -75,7 +75,7 @@ export const siteContent = {
       blurb:
         "A voice-first dating platform — designed, built, and launched end to end.",
       techDetails: "React Native, voice processing, full-stack E2E",
-      image: "/portfolio/heart2heart-placeholder.webp",
+      image: "/portfolio/13.png",
       liveUrl: "",
     },
   ],
