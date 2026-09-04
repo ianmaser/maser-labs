@@ -11,7 +11,7 @@ export default function Hero(): React.ReactElement {
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
         {/* Hero showpiece graphic */}
         <div
-          className="relative -mt-6 mb-0 h-[22rem] w-full max-w-6xl sm:h-[28rem] md:h-[36rem]"
+          className="relative mt-12 mb-0 h-[22rem] w-full max-w-6xl sm:h-[28rem] md:h-[36rem]"
           style={{
             maskImage:
               "radial-gradient(ellipse 80% 75% at 50% 42%, black 45%, transparent 100%)",
