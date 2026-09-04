@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import GlowContainer from "@/components/ui/GlowContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
@@ -12,11 +13,17 @@ export default function About(): React.ReactElement {
     <section id="about" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Portrait placeholder */}
+          {/* Portrait */}
           <ScrollReveal direction="left">
             <GlowContainer color="purple" intensity="medium">
-              <div className="mx-auto aspect-[3/4] w-full max-w-sm rounded-2xl border border-border-subtle bg-bg-elevated/50 flex items-center justify-center">
-                <span className="text-sm text-text-muted/40">Portrait</span>
+              <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-border-subtle">
+                <Image
+                  src="/portrait/portrait-final.JPG"
+                  alt="Ian Maser — founder of Maser Labs"
+                  width={400}
+                  height={533}
+                  className="h-full w-full object-cover"
+                />
               </div>
             </GlowContainer>
           </ScrollReveal>

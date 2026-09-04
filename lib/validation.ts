@@ -11,19 +11,18 @@ export const fullLeadSchema = z.object({
   email: z.email(),
   business_name: z.string().optional(),
   business_type: z.string().optional(),
-  service_interest: z.enum([
-    "Website",
-    "App",
-    "AI Automation",
-    "Dashboard",
-    "SEO",
-    "Not sure",
-  ]),
+  service_interest: z.string().optional(),
   budget_range: z.string().optional(),
   timeline: z.string().optional(),
   project_details: z.string().optional(),
   source: z.literal("bottom_form"),
 });
 
+export const leadSchema = z.discriminatedUnion("source", [
+  heroLeadSchema,
+  fullLeadSchema,
+]);
+
 export type HeroLead = z.infer<typeof heroLeadSchema>;
 export type FullLead = z.infer<typeof fullLeadSchema>;
+export type LeadInput = z.infer<typeof leadSchema>;
