@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 import { leadSchema } from "@/lib/validation";
 import type { HeroLead, FullLead } from "@/lib/validation";
 
@@ -64,7 +64,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   // Insert into Supabase
   const row = buildLeadRow(data, meta);
-  const { error: dbError } = await supabaseAdmin.from("leads").insert(row);
+  const { error: dbError } = await getSupabaseAdmin().from("leads").insert(row);
 
   if (dbError) {
     console.error("Supabase insert error:", dbError);
