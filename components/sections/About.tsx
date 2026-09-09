@@ -22,6 +22,7 @@ export default function About(): React.ReactElement {
                   alt="Ian Maser — founder of Maser Labs"
                   width={400}
                   height={533}
+                  sizes="(max-width: 1024px) 100vw, 384px"
                   className="h-full w-full object-cover"
                 />
               </div>

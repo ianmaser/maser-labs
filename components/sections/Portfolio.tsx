@@ -7,6 +7,7 @@ import GlowContainer from "@/components/ui/GlowContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
 import { siteContent } from "@/content/site-content";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 export default function Portfolio(): React.ReactElement {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -40,6 +41,7 @@ export default function Portfolio(): React.ReactElement {
                       alt={`${project.title} screenshot`}
                       width={600}
                       height={338}
+                      sizes="(max-width: 1024px) 100vw, 33vw"
                       className="h-full w-full object-cover object-top"
                     />
                   )}
@@ -64,9 +66,13 @@ export default function Portfolio(): React.ReactElement {
 
                   {/* Expandable tech details */}
                   <button
-                    onClick={() =>
-                      setExpandedIndex(expandedIndex === i ? null : i)
-                    }
+                    onClick={() => {
+                      const expanding = expandedIndex !== i;
+                      setExpandedIndex(expanding ? i : null);
+                      if (expanding) {
+                        trackEvent(ANALYTICS_EVENTS.PORTFOLIO_EXPAND, { project: project.title });
+                      }
+                    }}
                     className="mt-4 flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-accent-cyan transition-colors hover:text-accent-cyan/80"
                   >
                     Tech details

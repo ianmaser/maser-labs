@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { siteContent } from "@/content/site-content";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 const { serviceOptions, budgetOptions, timelineOptions } = siteContent.form;
 
@@ -51,6 +52,11 @@ export default function IntakeFormBottom(): React.ReactElement {
         body: JSON.stringify({ ...form, source: "bottom_form" }),
       });
       if (!res.ok) throw new Error("Failed to submit");
+      trackEvent(ANALYTICS_EVENTS.LEAD_SUBMITTED, {
+        source: "bottom_form",
+        service_interest: form.service_interest || undefined,
+        budget_range: form.budget_range || undefined,
+      });
       setStatus("success");
       setForm(INITIAL_FORM);
     } catch {
