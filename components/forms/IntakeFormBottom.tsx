@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { siteContent } from "@/content/site-content";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 const { serviceOptions, budgetOptions, timelineOptions } = siteContent.form;
 
@@ -35,7 +36,9 @@ const labelClasses = "block text-sm font-medium text-text-primary mb-1.5";
 
 export default function IntakeFormBottom(): React.ReactElement {
   const [form, setForm] = useState<FormData>(INITIAL_FORM);
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
 
   function update(field: keyof FormData, value: string): void {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -51,6 +54,11 @@ export default function IntakeFormBottom(): React.ReactElement {
         body: JSON.stringify({ ...form, source: "bottom_form" }),
       });
       if (!res.ok) throw new Error("Failed to submit");
+      trackEvent(ANALYTICS_EVENTS.LEAD_SUBMITTED, {
+        source: "bottom_form",
+        service_interest: form.service_interest || undefined,
+        budget_range: form.budget_range || undefined,
+      });
       setStatus("success");
       setForm(INITIAL_FORM);
     } catch {
@@ -78,7 +86,9 @@ export default function IntakeFormBottom(): React.ReactElement {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className={labelClasses}>Name</label>
+          <label htmlFor="name" className={labelClasses}>
+            Name
+          </label>
           <input
             id="name"
             type="text"
@@ -90,7 +100,9 @@ export default function IntakeFormBottom(): React.ReactElement {
           />
         </div>
         <div>
-          <label htmlFor="email" className={labelClasses}>Email</label>
+          <label htmlFor="email" className={labelClasses}>
+            Email
+          </label>
           <input
             id="email"
             type="email"
@@ -102,7 +114,9 @@ export default function IntakeFormBottom(): React.ReactElement {
           />
         </div>
         <div>
-          <label htmlFor="business_name" className={labelClasses}>Business name</label>
+          <label htmlFor="business_name" className={labelClasses}>
+            Business name
+          </label>
           <input
             id="business_name"
             type="text"
@@ -113,7 +127,9 @@ export default function IntakeFormBottom(): React.ReactElement {
           />
         </div>
         <div>
-          <label htmlFor="business_type" className={labelClasses}>Business type</label>
+          <label htmlFor="business_type" className={labelClasses}>
+            Business type
+          </label>
           <input
             id="business_type"
             type="text"
@@ -124,7 +140,9 @@ export default function IntakeFormBottom(): React.ReactElement {
           />
         </div>
         <div>
-          <label htmlFor="service_interest" className={labelClasses}>What do you need?</label>
+          <label htmlFor="service_interest" className={labelClasses}>
+            What can we help you with?
+          </label>
           <select
             id="service_interest"
             value={form.service_interest}
@@ -133,12 +151,16 @@ export default function IntakeFormBottom(): React.ReactElement {
           >
             <option value="">Select...</option>
             {serviceOptions.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
             ))}
           </select>
         </div>
         <div>
-          <label htmlFor="budget_range" className={labelClasses}>Budget range</label>
+          <label htmlFor="budget_range" className={labelClasses}>
+            Budget range
+          </label>
           <select
             id="budget_range"
             value={form.budget_range}
@@ -147,12 +169,16 @@ export default function IntakeFormBottom(): React.ReactElement {
           >
             <option value="">Select...</option>
             {budgetOptions.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
             ))}
           </select>
         </div>
         <div>
-          <label htmlFor="timeline" className={labelClasses}>Timeline</label>
+          <label htmlFor="timeline" className={labelClasses}>
+            Timeline
+          </label>
           <select
             id="timeline"
             value={form.timeline}
@@ -161,14 +187,18 @@ export default function IntakeFormBottom(): React.ReactElement {
           >
             <option value="">Select...</option>
             {timelineOptions.map((opt) => (
-              <option key={opt} value={opt}>{opt}</option>
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
             ))}
           </select>
         </div>
       </div>
 
       <div className="mt-5">
-        <label htmlFor="project_details" className={labelClasses}>Tell me about your project</label>
+        <label htmlFor="project_details" className={labelClasses}>
+          Tell me about your project
+        </label>
         <textarea
           id="project_details"
           rows={4}
@@ -188,7 +218,9 @@ export default function IntakeFormBottom(): React.ReactElement {
           {status === "submitting" ? "Sending..." : "Send it"}
         </button>
         {status === "error" && (
-          <p className="text-sm text-red-400">Something went wrong. Try again.</p>
+          <p className="text-sm text-red-400">
+            Something went wrong. Try again.
+          </p>
         )}
       </div>
     </form>

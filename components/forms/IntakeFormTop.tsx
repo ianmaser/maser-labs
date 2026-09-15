@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { siteContent } from "@/content/site-content";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 export default function IntakeFormTop(): React.ReactElement {
   const [email, setEmail] = useState("");
@@ -24,6 +25,7 @@ export default function IntakeFormTop(): React.ReactElement {
         }),
       });
       if (!res.ok) throw new Error("Failed to submit");
+      trackEvent(ANALYTICS_EVENTS.LEAD_SUBMITTED, { source: "hero_hook" });
       setStatus("success");
       setEmail("");
       setIdea("");

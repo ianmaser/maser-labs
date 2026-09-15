@@ -3,10 +3,10 @@
 import Image from "next/image";
 import GlowContainer from "@/components/ui/GlowContainer";
 import SectionHeading from "@/components/ui/SectionHeading";
-import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ui/ScrollReveal";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { siteContent } from "@/content/site-content";
 
-const { headline, story, stats } = siteContent.about;
+const { headline, story } = siteContent.about;
 
 export default function About(): React.ReactElement {
   return (
@@ -22,6 +22,7 @@ export default function About(): React.ReactElement {
                   alt="Ian Maser — founder of Maser Labs"
                   width={400}
                   height={533}
+                  sizes="(max-width: 1024px) 100vw, 384px"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -40,20 +41,6 @@ export default function About(): React.ReactElement {
               <p className="mt-6 text-base leading-relaxed text-text-muted">
                 {story}
               </p>
-
-              {/* Stats block */}
-              <StaggerContainer className="mt-10 grid grid-cols-3 gap-4" stagger={0.12} delay={0.3}>
-                {stats.map((stat) => (
-                  <StaggerItem key={stat.label}>
-                    <p className="text-2xl font-bold" style={{ color: '#22D3EE' }}>
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-xs uppercase tracking-widest text-text-muted">
-                      {stat.label}
-                    </p>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
             </div>
           </ScrollReveal>
         </div>

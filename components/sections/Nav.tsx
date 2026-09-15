@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { siteContent } from "@/content/site-content";
+import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
 const { links, cta } = siteContent.nav;
 
@@ -30,6 +31,7 @@ export default function Nav(): React.ReactElement {
           ))}
           <a
             href={cta.href}
+            onClick={() => trackEvent(ANALYTICS_EVENTS.CONSULT_CTA_CLICK, { location: "nav_desktop" })}
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent-cyan to-accent-purple px-5 py-2 text-sm font-medium text-bg-base transition-all hover:scale-[1.03] hover:shadow-[0_0_24px_rgba(34,211,238,0.3)]"
           >
             {cta.label}
@@ -62,7 +64,10 @@ export default function Nav(): React.ReactElement {
             ))}
             <a
               href={cta.href}
-              onClick={() => setMobileOpen(false)}
+              onClick={() => {
+                trackEvent(ANALYTICS_EVENTS.CONSULT_CTA_CLICK, { location: "nav_mobile" });
+                setMobileOpen(false);
+              }}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent-cyan to-accent-purple px-5 py-2.5 text-sm font-medium text-bg-base"
             >
               {cta.label}

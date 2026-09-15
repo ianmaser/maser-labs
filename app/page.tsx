@@ -11,9 +11,35 @@ import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import GradientDivider from "@/components/ui/GradientDivider";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Maser Labs",
+  description:
+    "Custom software, AI automation, and web services engineered for the modern era.",
+  url: "https://maserlabs.ai",
+  founder: {
+    "@type": "Person",
+    name: "Ian Maser",
+    jobTitle: "Founder & Lead Engineer",
+  },
+  serviceType: [
+    "Web & App Development",
+    "AI Automation & Integration",
+    "Design & UX",
+    "Business Systems & Dashboards",
+  ],
+  areaServed: "US",
+  priceRange: "$$",
+};
+
 export default function Home(): React.ReactElement {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Nav />
       <Hero />
       <TrustStrip />
