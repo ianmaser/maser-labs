@@ -20,7 +20,8 @@ export const siteContent = {
   },
 
   trustStrip: {
-    credibilityLine: "Built by an engineer from Citibank & Verizon",
+    credibilityLine:
+      "Professional software engineering experience at enterprise scale",
     techLogos: [
       "React",
       "Next.js",
@@ -83,10 +84,10 @@ export const siteContent = {
   about: {
     headline: "Why Maser Labs",
     story:
-      "I spent years building software at Citibank and Verizon — large-scale systems where reliability and quality aren't optional. Now I bring that same engineering discipline to businesses that want agency-quality work without the agency overhead. You get a senior engineer who actually builds your project, not a sales team that hands it off. I'm deeply fluent in AI — not as a buzzword, but as a practical tool I use every day to ship faster and build smarter. That means you get modern, forward-looking solutions at a speed that surprises people.",
+      "My name is Ian Maser and I'm the founder of Maser Labs. I've spent years in the tech industry building software for enterprise-level companies; large-scale systems where reliability and quality aren't optional. Now my team and I bring that same professional discipline to businesses that want agency-quality work without the traditional agency overhead. We are an AI-driven agency and we use the latest AI tools to move faster, automate repetitive work, and deliver more efficiently. But make no mistake, we are not “vibe-coders.” Our work is backed by years of professional experience across software development, design, and technology. Every project is approached with the architecture, testing, maintainability, and technical rigor you’d expect from seasoned experts in their fields.",
     stats: [
       { label: "Years Experience", value: "5+" },
-      { label: "Enterprise Clients", value: "Citibank, Verizon" },
+      { label: "Enterprise Clients", value: "Fortune 500" },
       { label: "Projects Shipped", value: "10+" },
     ],
   },
@@ -116,27 +117,27 @@ export const siteContent = {
 
   pricing: {
     signalLine:
-      "Projects can start as low as a few hundred to tens of thousands depending on scope — the free consult is where we figure out what's right for you.",
+      "Every engagement is tailored to the scope, complexity, and goals of your project.",
     cta: "Book a Free Consult",
   },
 
   leadMagnet: {
     headline: "Free 15-Min AI & Web Opportunity Audit",
     description:
-      "Already have a website? Book a quick call and let's talk about how we can improve your business. Whether it's changes your website, an automation opportunity, or an SEO gap, we'll give it the modern, forward-looking treatment it deserves.",
+      "Already have a website, project, or business? Book a quick call and let’s talk about how we can help. Whether it’s improving your website, identifying an automation opportunity, or closing an SEO gap, we’ll help bring it up to modern standards and position it for what’s next.",
     cta: "Book Your Free Audit",
   },
 
   form: {
     serviceOptions: [
       "Website",
-      "App",
-      "AI Automation",
-      "Dashboard",
-      "Design & UX",
-      "SEO",
+      "Web or Mobile App",
+      "AI & Automation",
+      "Internal Tool / Dashboard",
+      "UI/UX Design",
+      "SEO & Optimization",
       "Other (please specify below)",
-      "Not sure/Just exploring",
+      "Not sure / Just exploring",
     ],
     budgetOptions: [
       "Under $2,000",
