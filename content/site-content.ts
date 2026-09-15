@@ -85,11 +85,6 @@ export const siteContent = {
     headline: "Why Maser Labs",
     story:
       "My name is Ian Maser and I'm the founder of Maser Labs. I've spent years in the tech industry building software for enterprise-level companies; large-scale systems where reliability and quality aren't optional. Now my team and I bring that same professional discipline to businesses that want agency-quality work without the traditional agency overhead. We are an AI-driven agency and we use the latest AI tools to move faster, automate repetitive work, and deliver more efficiently. But make no mistake, we are not “vibe-coders.” Our work is backed by years of professional experience across software development, design, and technology. Every project is approached with the architecture, testing, maintainability, and technical rigor you’d expect from seasoned experts in their fields.",
-    stats: [
-      { label: "Years Experience", value: "5+" },
-      { label: "Enterprise Clients", value: "Fortune 500" },
-      { label: "Projects Shipped", value: "10+" },
-    ],
   },
 
   process: [
