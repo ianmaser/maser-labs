@@ -73,7 +73,7 @@ export default function IntakeFormBottom(): React.ReactElement {
           Thanks for reaching out!
         </h3>
         <p className="mt-2 text-text-muted">
-          I&apos;ll get back to you within 24 hours — usually much sooner.
+          We&apos;ll get back to you within 24 hours — usually much sooner.
         </p>
       </div>
     );
