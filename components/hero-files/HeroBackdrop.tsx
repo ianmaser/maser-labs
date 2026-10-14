@@ -25,7 +25,7 @@
 
        export function Hero() {
          return (
-           <section className="relative min-h-[92vh] overflow-hidden bg-[#050506]">
+           <section className="relative min-h-[92vh] overflow-hidden bg-[#0A0B10]">
              <HeroBackdrop />                       // z-0 background
              <div className="relative z-10 flex flex-col items-center ...">
                /* your existing headline, sub-line, intake hook, CTAs */

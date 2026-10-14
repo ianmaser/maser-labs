@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Logo from "@/components/ui/Logo";
 import { siteContent } from "@/content/site-content";
 import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics";
 
@@ -13,10 +14,13 @@ export default function Nav(): React.ReactElement {
   return (
     <nav className="fixed top-0 left-0 z-50 w-full border-b border-border-subtle bg-bg-base/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        {/* Logo */}
-        <a href="#" className="text-lg font-bold tracking-tight text-text-primary">
-          Maser Labs
-        </a>
+        {/* Logo — horizontal on desktop, mark only on mobile */}
+        <div className="hidden md:block">
+          <Logo variant="horizontal" />
+        </div>
+        <div className="md:hidden">
+          <Logo variant="mark" />
+        </div>
 
         {/* Desktop links */}
         <div className="hidden items-center gap-8 md:flex">

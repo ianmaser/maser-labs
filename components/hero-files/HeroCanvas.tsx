@@ -13,7 +13,7 @@
 
      export function Hero() {
        return (
-         <section className="relative min-h-[92vh] overflow-hidden bg-[#050506]">
+         <section className="relative min-h-[92vh] overflow-hidden bg-[#0A0B10]">
            <HeroCanvas />                     // fills the section, z-0
            <div className="relative z-10 ...">// your existing hero copy
              <h1>Build for what's next.</h1>
@@ -450,7 +450,7 @@ export default function HeroCanvas({ className = "" }: { className?: string }) {
         ctx!.globalCompositeOperation = "source-over";
         ctx!.filter = "none";
         ctx!.globalAlpha = 1;
-        ctx!.fillStyle = "#050506";
+        ctx!.fillStyle = "#0A0B10";
         ctx!.fillRect(0, 0, W, H);
         ctx!.globalCompositeOperation = "lighter";
 
@@ -587,7 +587,7 @@ export default function HeroCanvas({ className = "" }: { className?: string }) {
         inset: 0,
         zIndex: 0,
         overflow: "hidden",
-        background: "#050506",
+        background: "#0A0B10",
       }}
     >
       <canvas
@@ -606,7 +606,7 @@ export default function HeroCanvas({ className = "" }: { className?: string }) {
           inset: 0,
           pointerEvents: "none",
           background:
-            "linear-gradient(to bottom, rgba(5,5,6,0.45) 0%, rgba(5,5,6,0) 18%, rgba(5,5,6,0) 68%, rgba(5,5,6,0.9) 96%, #050506 100%)",
+            "linear-gradient(to bottom, rgba(10,11,16,0.45) 0%, rgba(10,11,16,0) 18%, rgba(10,11,16,0) 68%, rgba(10,11,16,0.9) 96%, #0A0B10 100%)",
         }}
       />
     </div>
