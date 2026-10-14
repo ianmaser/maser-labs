@@ -1,4 +1,4 @@
-import GhostWordmark from "@/components/ui/GhostWordmark";
+import Logo from "@/components/ui/Logo";
 import { siteContent } from "@/content/site-content";
 
 const { copyright, socials } = siteContent.footer;
@@ -26,12 +26,12 @@ const ICON_MAP: Record<string, React.FC> = {
 
 export default function Footer(): React.ReactElement {
   return (
-    <footer className="relative border-t border-border-subtle py-16 overflow-hidden">
-      <GhostWordmark className="absolute inset-0 z-0 flex items-center justify-center" />
-
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-          <p className="text-sm text-text-muted">{copyright}</p>
+    <footer className="border-t border-border-subtle py-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex flex-col items-center gap-8">
+          <Logo variant="stacked" />
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:w-full">
+            <p className="text-sm text-text-muted">{copyright}</p>
 
           <div className="flex items-center gap-4">
             {socials.map((social) => {
@@ -49,6 +49,7 @@ export default function Footer(): React.ReactElement {
                 </a>
               );
             })}
+            </div>
           </div>
         </div>
       </div>

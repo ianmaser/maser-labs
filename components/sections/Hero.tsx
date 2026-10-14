@@ -7,7 +7,7 @@ const { headline, subline, ctaPrimary, ctaSecondary } = siteContent.hero;
 
 export default function Hero(): React.ReactElement {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#050506]">
+    <section className="relative min-h-screen overflow-hidden bg-[#0A0B10]">
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
         {/* Hero showpiece graphic */}
         <div
